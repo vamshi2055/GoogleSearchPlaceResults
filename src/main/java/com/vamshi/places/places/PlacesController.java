@@ -6,6 +6,7 @@ import com.google.maps.model.PlaceDetails;
 import com.google.maps.model.PlacesSearchResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,5 +33,12 @@ public class PlacesController {
         PlaceDetails place=googleAPIClient.getPlaceDetails(placeId);
         System.out.println(place.toString());
         return place;
+    }
+     @GetMapping(value = "/placeDetails")
+    public String getPlaceDetails(@RequestParam String placeId) throws InterruptedException, ApiException, IOException {
+       //PlaceDto place=services.getPlaceDetails(placeId);
+       
+        System.out.println("Vamshi");
+        return "Vamshi";
     }
 }
