@@ -41,4 +41,9 @@ public class PlacesController {
         System.out.println("Vamshi");
         return "Vamshi";
     }
+    @GetMapping(value = "/hello")
+    public String helloWorld() throws InterruptedException, ApiException, IOException {
+        System.out.println("Vamshi");
+        return "Hello World";
+    }
 }
