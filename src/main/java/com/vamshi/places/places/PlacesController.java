@@ -35,7 +35,7 @@ public class PlacesController {
         return place;
     }
      @GetMapping(value = "/placeDetails")
-    public String getPlaceDetails(@RequestParam String placeId) throws InterruptedException, ApiException, IOException {
+    public String getPlaceDetailsGet(@RequestParam String placeId) throws InterruptedException, ApiException, IOException {
        //PlaceDto place=services.getPlaceDetails(placeId);
        
         System.out.println("Vamshi");
